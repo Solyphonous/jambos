@@ -6,11 +6,18 @@ function getSubdomain(host) {
     return match ? match[1] : null;
 }
 
+function loadPage(url) {
+    window.location.replace(url)
+}
+
 // Main
 
 const url = window.location.host
 const subdomain = getSubdomain(url)
 
-if (subdomain == "p") {
-    window.location.replace("https://rentry.co/phy")
+switch(subdomain) {
+    case "p":
+        loadPage("https://rentry.co/phy")
+    case "soly":
+        loadPage("https://solyphonous.carrd.co/")
 }
