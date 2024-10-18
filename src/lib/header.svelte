@@ -12,7 +12,9 @@
 
     const links = [
         {name: "Home", path: "/"},
-        {name: "About", path: "/about"}
+        {name: "About", path: "/about"},
+        {name: "DO NOT CLICK EVIL THINGS INSIDE", path: "/linganguli"},
+        {name: "Our Music", path: "/musica"}
     ]
 </script>
 
