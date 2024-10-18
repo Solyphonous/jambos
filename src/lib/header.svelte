@@ -35,11 +35,6 @@
 
 
 <style>
-    :global(body) {
-        margin: 0;
-        padding: 0;
-    }
-
     nav {
         position: sticky;
         height: 70px;
@@ -48,13 +43,15 @@
         display: flex;
         align-items: center;
         padding: 0 20px;
-        margin: 0;
+        margin-bottom: 120px;
 
-        background-color: rgb(27, 27, 27);
+        background-color: rgb(10, 10, 10);
     }
     
     img {
-        height: 100%;
+        height: 200%;
+        transform: rotate(-15deg);
+
     }
 
     ul {
