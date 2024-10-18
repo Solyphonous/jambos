@@ -1,6 +1,7 @@
 <script>
-    import { checkForRedirects } from "$lib/redirector"
-    checkForRedirects()
+    import Redirector from "../lib/redirector.svelte";
 </script>
+
+<Redirector />
 
 <slot />
