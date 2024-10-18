@@ -19,7 +19,7 @@ switch(subdomain) {
     case "p":
         loadPage("https://rentry.co/phy")
         break
-    case "soly":1
+    case "soly":
         loadPage("https://solyphonous.carrd.co/")
         break
     case "seb":
