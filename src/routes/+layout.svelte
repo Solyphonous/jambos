@@ -25,7 +25,11 @@
         <title>The Jambos Casa - Home</title>
     {/if}
 
+    <meta content="The Jambos Casa" property="og:title" />
     <meta content="images/jambojudah.png" property="og:image" />
+    <meta content="https://jambos.casa" property="og:url" />
+    <meta content="#000000" data-react-helmet="true" name="theme-color" />
+    <meta name="twitter:card" content="summary_large_image" />
 </head>
 
 <Redirector />
