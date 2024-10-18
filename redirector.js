@@ -17,9 +17,12 @@ const subdomain = getSubdomain(url)
 
 switch(subdomain) {
     case "p":
-        loadPage("https://rentry.co/phy")
-    case "soly":
-        loadPage("https://solyphonous.carrd.co/")
+        console.log(url, subdomain)
+        //loadPage("https://rentry.co/phy")
+    case "soly":1
+        console.log(url, subdomain)
+        //loadPage("https://solyphonous.carrd.co/")
     case "seb":
-        loadPage("https://sebistan.carrd.co/")
+        console.log(url, subdomain)
+        //loadPage("https://sebistan.carrd.co/")
 }
