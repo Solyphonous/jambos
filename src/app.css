@@ -1,9 +1,19 @@
-main {
+h1, p {
     max-width: 80%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-body {
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+body, html {
+    font-family: "Noto Sans Mono", "Consolas", "SF Mono", monospace;
     background-color: black;
     margin: 0;
     padding: 0;
