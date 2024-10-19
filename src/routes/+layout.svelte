@@ -25,7 +25,7 @@
         <title>The Jambos Casa - Home</title>
     {/if}
     
-    <meta content="https://jambos.casa/images/jambojudah.png" property="og:image" />
+    <meta content="/images/jambojudah.png" property="og:image" />
     <meta property="og:image:width" content="1080">
     <meta property="og:image:height" content="1080">
 </head>
