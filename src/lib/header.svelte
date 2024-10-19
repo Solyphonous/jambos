@@ -13,14 +13,15 @@
     const links = [
         {name: "Home", path: "/"},
         {name: "About", path: "/about"},
+        {name: "Music", path: "/musica"},
+        {name: "News", path: "/news"},
         {name: "DO NOT CLICK EVIL THINGS INSIDE", path: "/linganguli"},
-        {name: "Our Music", path: "/musica"}
     ]
 </script>
 
 <div class="header">
     <nav>
-        <a href="/"><img src="images/jambologo.png" alt="The jambos logo"></a>
+        <a href="/"><img src="/images/jambologo.png" alt="The jambos logo"></a>
         <ul>
             {#each links as link}
                 <li>
@@ -45,7 +46,7 @@
         display: flex;
         align-items: center;
         padding: 0 20px;
-        margin-bottom: 120px;
+        margin-bottom: 100px;
 
         background-color: rgb(10, 10, 10);
     }
@@ -69,10 +70,7 @@
     }
 
     a, span {
-        font-family: "Noto Sans Mono", "Consolas", "SF Mono", monospace;
-        color: white;
-        text-decoration: none;
-        font-size: 30px;
+        font-size: 2rem;
         height: 100%;
     }
     span {
