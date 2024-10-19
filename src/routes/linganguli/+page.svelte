@@ -6,10 +6,10 @@
     <li> Free rabax at my bumhole</li>
 </ol>
 
-<img src="images/golonka.jpg" alt="stupid cripple">
+<img src="/images/golonka.jpg" alt="stupid cripple">
 
 <h2> be here and don't turn back</h2>
 
-<img src="images/notgolonka.jpg" alt="fuck off you todger">
+<img src="/images/notgolonka.jpg" alt="fuck off you todger">
 
-<img src="images/andy.jpg" alt="balabinga">
+<img src="/images/andy.jpg" alt="balabinga">
