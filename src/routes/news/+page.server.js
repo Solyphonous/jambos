@@ -1,8 +1,12 @@
-import fs from "fs"
+async function getNews() {
+    const response = await fetch("/api/list")
+    const data = response.json()
+    return data
+}
 
-export function load () {
-    let files = fs.readdirSync("content/news")
+export async function load () {
+    let news = await getNews()
     return {
-        articles: files
+        articles: news
     }
 }
