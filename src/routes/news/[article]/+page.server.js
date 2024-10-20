@@ -7,7 +7,7 @@ export async function load ({ params }) {
     var content = `<h1>No article content</h1>`
     var author = `Nobody`
 
-    const response = await fetch(`https://jambos.casa/api/article/${encodedTitle}`)
+    const response = await fetch(`https://jambos-worker.jopogb.workers.dev/api/article/${encodedTitle}`)
     const data = await response.json()
     console.log(data)
     if (response.ok) {
