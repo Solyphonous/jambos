@@ -53,6 +53,7 @@
     
     img {
         height: 200%;
+        max-width: 100%;
         transform: rotate(-15deg);
 
     }
