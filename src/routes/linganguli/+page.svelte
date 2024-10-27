@@ -1,15 +1,25 @@
-<h1> I POO EVERYWHERE OH MY GOD IT'S ALL OVER THE WALLS HELP ME </h1>
+<main style="background-color:{color};">
+    <h1> WELCOME TO THE EVIL JAMBOS WEBSITE</h1>
 
-<ol>
-    <li>help</li>
-    <li>HELP</li>
-    <li> Free rabax at my bumhole</li>
-</ol>
+    <p> YOU WHO CAME HERE HAS BEEN CURSED FOR 6 weeks</p>
 
-<img src="/images/golonka.jpg" alt="stupid cripple">
+    <input type="color" bind:value={color}/> <p style="display: inline;"> &lt AWESOME COLOUR BACKGROUND PICKING DEVICE COURTESTY OF JAMBO CORPORATION</p>
+    
+    <img src="/images/golonka.jpg" alt="stupid cripple">
+    
+    <h2> be here and don't turn back (or do since it's evil site)</h2>
+    
+    <img src="/images/notgolonka.jpg" alt="fuck off you todger">
+    
+    <img src="/images/andy.jpg" alt="balabinga">
 
-<h2> be here and don't turn back</h2>
+</main>
 
-<img src="/images/notgolonka.jpg" alt="fuck off you todger">
 
-<img src="/images/andy.jpg" alt="balabinga">
+<script>
+    let color = "black"
+    //function functioningfunction(color){
+    //    cookies.set
+    //}
+</script>
+
