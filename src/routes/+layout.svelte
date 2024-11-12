@@ -14,15 +14,21 @@
         });
     }
 
-    $: pagetitle = currentpath.substring(1).charAt(0).toUpperCase() + currentpath.substring(1).slice(1)
+    $: pagetitle = currentpath.slice(1).charAt(0).toUpperCase() + currentpath.slice(2)
+    
+    $: {
+        if (pagetitle == "") {
+            pagetitle = "Home"
+        }
+    }
+    
+    $: isArticle = /News\/.+/.test(pagetitle)
 
 </script>
 
 <head>
-    {#if (pagetitle != "")}
+    {#if (!isArticle)}
         <title>The Jambos Casa - {pagetitle}</title>
-    {:else}
-        <title>The Jambos Casa - Home</title>
     {/if}
     
     <meta content="/images/jambojudah.png" property="og:image" />
