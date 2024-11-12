@@ -1,6 +1,6 @@
-const WorkersAPIKey = process.env.WorkersAPIKey
-
 export async function load ({ params }) {
+    const WorkersAPIKey = process.env.WorkersAPIKey
+
     const title = params.article
     const encodedTitle = title.replace(/ /g, "-")
 
