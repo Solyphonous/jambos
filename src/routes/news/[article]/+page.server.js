@@ -1,4 +1,4 @@
-import { WorkersAPIKey } from '$env/static/private';
+import { env } from '$env/static/private';
 
 export async function load ({ params }) {
     const title = params.article
@@ -9,7 +9,7 @@ export async function load ({ params }) {
 
     const response = await fetch(`https://jambos-worker.jopogb.workers.dev/api/article/${encodedTitle}`, {
         headers: {
-            "Authorization": WorkersAPIKey
+            "Authorization": env.WorkersAPIKey
         }
     })
     const data = await response.json()
