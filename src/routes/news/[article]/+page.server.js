@@ -1,3 +1,5 @@
+import { WorkersAPIKey } from '$env/static/private';
+
 export async function load ({ params }) {
     const title = params.article
     const encodedTitle = title.replace(/ /g, "-")
@@ -5,7 +7,11 @@ export async function load ({ params }) {
     var content = `<h1>No article content</h1>`
     var author = `Nobody`
 
-    const response = await fetch(`https://jambos-worker.jopogb.workers.dev/api/article/${encodedTitle}`)
+    const response = await fetch(`https://jambos-worker.jopogb.workers.dev/api/article/${encodedTitle}`, {
+        headers: {
+            "Authorization": WorkersAPIKey
+        }
+    })
     const data = await response.json()
     if (response.ok) {
         content = data.content
