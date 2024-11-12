@@ -15,7 +15,7 @@
         {name: "About", path: "/about"},
         {name: "Music", path: "/musica"},
         {name: "News", path: "/news"},
-        {name: "DO NOT CLICK EVIL THINGS INSIDE", path: "/linganguli"},
+        {name: "EVIL PAGE", path: "/linganguli"},
     ]
 </script>
 
