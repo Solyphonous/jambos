@@ -1,7 +1,6 @@
-import { env } from "$env/static/private";
+import { WorkersAPIKey } from "$env/static/private";
 
 export async function load ({ params }) {
-    const WorkersAPIKey = env.WorkersAPIKey
 
     const title = params.article
     const encodedTitle = title.replace(/ /g, "-")
