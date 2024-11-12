@@ -15,7 +15,9 @@
         {name: "About", path: "/about"},
         {name: "Music", path: "/musica"},
         {name: "News", path: "/news"},
+        {name: "The Jamborium", path: "/jamborium"},
         {name: "EVIL PAGE", path: "/linganguli"},
+        {name: "Admin", path: "/admin"}
     ]
 </script>
 

@@ -1,5 +1,12 @@
+import { WorkersAPIKey } from '$env/static/private';
+
 async function getNews() {
-    const response = await fetch("https://jambos-worker.jopogb.workers.dev/api/list")
+    console.log(WorkersAPIKey)
+    const response = await fetch("https://jambos-worker.jopogb.workers.dev/api/list", {
+        headers: {
+            "Authorization": WorkersAPIKey
+        }
+    })
     const data = response.json()
     return data
 }
