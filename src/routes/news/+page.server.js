@@ -7,11 +7,19 @@ async function getNews() {
         }
     })
     const data = response.json()
-    return data
+    if (response.ok) {
+        return data
+    } else {
+        return [
+            "Error fetching articles: ${data.error}"
+        ]
+    }
+    
 }
 
 export async function load () {
     let news = await getNews()
+
     return {
         articles: news
     }
