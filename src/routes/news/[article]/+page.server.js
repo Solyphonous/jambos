@@ -1,4 +1,4 @@
-import { env } from "$env/static/private";
+import { env } from "$env/dynamic/private";
 
 export async function load ({ params }) {
 
