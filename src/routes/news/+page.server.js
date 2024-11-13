@@ -11,10 +11,9 @@ async function getNews() {
         return data
     } else {
         return [
-            "Error fetching articles: ${data.error}"
+            {"name": "Error fetching articles: ${data.error}"}
         ]
     }
-    
 }
 
 export async function load () {
