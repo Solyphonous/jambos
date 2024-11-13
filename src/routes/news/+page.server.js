@@ -1,7 +1,9 @@
 import { env } from "$env/dynamic/private";
 
 async function getNews() {
-    console.log(env.WorkersAPIKey)
+    env.forEach(element => {
+        console.log(element)
+    });
     const response = await fetch("https://jambos-worker.jopogb.workers.dev/api/list", {
         headers: {
             "Authorization": env.WorkersAPIKey
