@@ -11,7 +11,7 @@ async function getNews() {
         return data
     } else {
         return [
-            {"name": `Error fetching articles: ${data.error}`}
+            {"name": `Error ${response.status} fetching articles: ${data.error}`}
         ]
     }
 }
