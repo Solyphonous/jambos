@@ -1,4 +1,4 @@
-import { WorkersAPIKey } from "$env/static/private";
+import { WorkersAPIKey } from "$env/dynamic/private";
 
 async function getNews() {
     const response = await fetch("https://jambos-worker.jopogb.workers.dev/api/list", {
