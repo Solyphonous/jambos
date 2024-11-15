@@ -24,11 +24,6 @@
 
     if (token) {
         links.push({name: "Logout", path: "Logout"})
-
-        if (token.rank == 255) {
-        links.push({name: "Admin", path: "/admin"})
-        }
-
     }
     
 
