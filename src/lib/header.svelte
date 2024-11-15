@@ -2,6 +2,8 @@
     import { browser } from "$app/environment"
     import { afterNavigate } from "$app/navigation"
 
+    export let token
+
     let currentpath = browser ? window.location.pathname : "/"
 
     if (browser) {
@@ -19,6 +21,18 @@
         {name: "EVIL PAGE", path: "/linganguli"},
         {name: "Admin", path: "/admin"}
     ]
+
+    if (token) {
+        links.push({name: "Logout", path: "Logout"})
+
+        if (token.rank == 255) {
+        links.push({name: "Admin", path: "/admin"})
+        }
+
+    }
+    
+
+    
 </script>
 
 <div class="header">

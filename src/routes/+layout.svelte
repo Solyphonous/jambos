@@ -1,4 +1,6 @@
 <script>
+    export let data;
+
     import '../app.css';
     import Redirector from "../lib/redirector.svelte";
     import Header from "../lib/header.svelte";
@@ -37,7 +39,7 @@
 </head>
 
 <Redirector />
-<Header />
+<Header token={data.token}/>
 
 <main>
     <slot />
