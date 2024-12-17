@@ -1,4 +1,10 @@
+// Login server
+
 import bcrypt from "bcrypt"
+
+function getJWT(username, passhash) {
+    
+}
 
 export const actions = {
 	default: async ({ request }) => {
@@ -7,11 +13,5 @@ export const actions = {
         const password = formData.get("password")
         console.log(username, password)
 
-        bcrypt.genSalt(10, function(err, salt) {
-            bcrypt.hash(password, salt, function(err, hash) {
-                console.log(hash)
-            })
-        })
-        
 	}
 };
