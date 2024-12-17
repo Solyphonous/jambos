@@ -1,6 +1,7 @@
 // Login server
 
 import { env } from "$env/dynamic/private";
+import { redirect } from "@sveltejs/kit";
 
 async function getJWT(username, password) {
     const response = await fetch(`https://jambos-worker.jopogb.workers.dev/login`, {
@@ -33,7 +34,7 @@ async function getJWT(username, password) {
 }
 
 export const actions = {
-	default: async ({ request }) => {
+	default: async ({ request, cookies }) => {
 		const formData = await request.formData()
         const username = formData.get("username")
         const password = formData.get("password")
@@ -42,9 +43,9 @@ export const actions = {
         const token = await getJWT(username, password)
 
         if (token.success) {
-            return {
-                token: token
-            }
+            cookies.set("login", token.token, { path: "/" })
+            redirect(303, "/") // Change to path that login was recieved from later
         }
+        
 	}
 };

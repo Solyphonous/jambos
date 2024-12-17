@@ -1,6 +1,7 @@
 // Sign up server
 
 import { env } from "$env/dynamic/private";
+import { redirect } from "@sveltejs/kit";
 
 async function signUp(username, password) {
     const response = await fetch(`https://jambos-worker.jopogb.workers.dev/signup`, {
@@ -18,8 +19,6 @@ async function signUp(username, password) {
         })
         const data = await response.json()
         if (response.ok) {
-            const token = data.token
-            console.log(`Success! Token: ${token}`)
             return {
                 success: true,
             }
@@ -38,12 +37,11 @@ export const actions = {
         const password = formData.get("password")
         console.log(`Username: ${username}\nPassword: ${password}`)
 
-        const token = await getJWT(username, password)
+        const signupSuccess = await signUp(username, password)
 
-        if (token.success) {
-            return {
-                token: token
-            }
+        if (signupSuccess.success) {
+            console.log("Account successfully created.")
+            redirect(303, "/login")
         }
 	}
 };
