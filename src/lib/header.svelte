@@ -12,22 +12,17 @@
         });
     }
 
-    const links = [
+    $: links = [
         {name: "Home", path: "/"},
         {name: "About", path: "/about"},
         {name: "Music", path: "/musica"},
         {name: "News", path: "/news"},
         {name: "The Jamborium", path: "/jamborium"},
         {name: "EVIL PAGE", path: "/linganguli"},
-        {name: "Admin", path: "/admin"}
+        {name: "Admin", path: "/admin"},
+        ...(token ? [{name: "Logout", path: "/logout"}]: [])
     ]
 
-    if (token) {
-        links.push({name: "Logout", path: "Logout"})
-    }
-    
-
-    
 </script>
 
 <div class="header">
