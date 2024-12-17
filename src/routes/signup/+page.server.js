@@ -1,9 +1,9 @@
-// Login server
+// Sign up server
 
 import { env } from "$env/dynamic/private";
 
-async function getJWT(username, password) {
-    const response = await fetch(`https://jambos-worker.jopogb.workers.dev/login`, {
+async function signUp(username, password) {
+    const response = await fetch(`https://jambos-worker.jopogb.workers.dev/signup`, {
             method: "POST",
             headers: {
                 "Authorization": env.WorkersAPIKey,
@@ -22,10 +22,9 @@ async function getJWT(username, password) {
             console.log(`Success! Token: ${token}`)
             return {
                 success: true,
-                token: token
             }
         } else {
-            console.error(`Error from login server: ${data.error}`)
+            console.error(`Error from signup server: ${data.error}`)
             return {
                 success: false
             }

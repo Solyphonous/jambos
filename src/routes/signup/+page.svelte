@@ -1,7 +1,7 @@
 <script>
-    // Login
+    // Sign up
     import Userform from "../../lib/userform.svelte";
 </script>
 
-<h1>Login</h1>
+<h1>Sign up</h1>
 <Userform />

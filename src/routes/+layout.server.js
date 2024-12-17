@@ -6,6 +6,6 @@ export async function load({ cookies }) {
     if (token) {
         return token
     } else {
-        console.log("No token")
+        console.log("Root server: No token could be loaded from cookies")
     }
 }
