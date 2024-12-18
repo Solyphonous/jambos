@@ -1,10 +1,9 @@
 <script>
-    import { goto } from "$app/navigation"
 	import { onMount } from "svelte";
 
     async function logout() {
         await fetch("/logout", { method: "POST" })
-        goto("/")
+        window.location = "/login"
     }
 
     onMount(() => {

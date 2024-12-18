@@ -34,7 +34,7 @@ async function getJWT(username, password) {
 }
 
 export const actions = {
-	default: async ({ request, cookies }) => {
+	default: async ({ request, cookies, url }) => {
 		const formData = await request.formData()
         const username = formData.get("username")
         const password = formData.get("password")
@@ -44,8 +44,14 @@ export const actions = {
 
         if (token.success) {
             cookies.set("login", token.token, { path: "/" })
-            redirect(303, "/") // Change to path that login was recieved from later
+            redirect(303, url.searchParams.get("redirect") ?? "/")
         }
         
 	}
 };
+
+export function load({ cookies, url }) {
+    if (cookies.get("login")) {
+        redirect(303, url.searchParams.get("redirect") ?? "/")
+    }
+}
