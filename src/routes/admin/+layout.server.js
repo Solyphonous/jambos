@@ -18,7 +18,7 @@ export function load({ cookies }) {
         redirect(302, "/")
     }
 
-    if (logintoken.rank < 255) {
+    if (logintoken.rank < 250) {
         console.warn("Rank too low")
         redirect(302, "/")
     }
