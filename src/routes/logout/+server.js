@@ -1,3 +1,4 @@
 export function POST({ cookies }) {
-    cookies.delete("login", { path: "/" })
+    cookies.delete("token", { path: "/" })
+    return new Response(null, { status: 200})
 }

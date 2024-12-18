@@ -48,7 +48,7 @@ export const actions = {
 };
 
 export function load({ cookies, url }) {
-    if (cookies.get("login")) {
+    if (cookies.get("token")) {
         redirect(303, url.searchParams.get("redirect") ?? "/")
     }
 }

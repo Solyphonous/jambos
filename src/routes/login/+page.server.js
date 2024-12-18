@@ -20,7 +20,7 @@ async function getJWT(username, password) {
         const data = await response.json()
         if (response.ok) {
             const token = data.token
-            console.log(`Success! Token: ${token}`)
+            console.log(`Success logging in! Token: ${token}`)
             return {
                 success: true,
                 token: token
@@ -42,7 +42,7 @@ export const actions = {
         const token = await getJWT(username, password)
 
         if (token.success) {
-            cookies.set("login", token.token, { path: "/" })
+            cookies.set("token", token.token, { path: "/" })
             redirect(303, url.searchParams.get("redirect") ?? "/")
         } else {
             return { toast: token.error }
@@ -51,8 +51,8 @@ export const actions = {
 	}
 };
 
-export function load({ cookies, url }) {
-    if (cookies.get("login")) {
+export function load({ locals, url }) {
+    if (locals.token) {
         redirect(303, url.searchParams.get("redirect") ?? "/")
     }
 }

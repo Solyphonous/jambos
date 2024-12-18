@@ -18,8 +18,5 @@
 
 <script>
     let color = "black"
-    //function functioningfunction(color){
-    //    cookies.set
-    //}
 </script>
 
