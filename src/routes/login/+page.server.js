@@ -26,25 +26,26 @@ async function getJWT(username, password) {
                 token: token
             }
         } else {
-            console.error(`Error from login server: ${data.error}`)
             return {
-                success: false
+                success: false,
+                error: data.error
             }
         }    
 }
 
 export const actions = {
-	default: async ({ request, cookies, url }) => {
+	default: async ({ request, cookies, url, locals, event }) => {
 		const formData = await request.formData()
         const username = formData.get("username")
         const password = formData.get("password")
-        console.log(`Username: ${username}\nPassword: ${password}`)
 
         const token = await getJWT(username, password)
 
         if (token.success) {
             cookies.set("login", token.token, { path: "/" })
             redirect(303, url.searchParams.get("redirect") ?? "/")
+        } else {
+            return { toast: token.error }
         }
         
 	}

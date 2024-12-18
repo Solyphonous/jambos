@@ -23,5 +23,7 @@ export function load({ cookies }) {
         redirect(302, "/")
     }
 
-    return { token: logintoken }
+    return { 
+        token: logintoken,
+     }
 }
