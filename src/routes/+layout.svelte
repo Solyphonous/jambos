@@ -44,3 +44,14 @@
 <main>
     <slot />
 </main>
+
+<style>
+    :global(body) {
+        background-position: right;
+        background-size: 100vh;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+    }
+    
+</style>

@@ -44,8 +44,12 @@
 
 
 <style>
-    nav {
+
+    .header {
         position: sticky;
+        top: 0
+    }
+    nav {
         height: 70px;
         top: 0;
 
@@ -61,7 +65,6 @@
         height: 200%;
         max-width: 100%;
         transform: rotate(-15deg);
-
     }
 
     ul {
