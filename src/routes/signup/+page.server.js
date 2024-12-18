@@ -45,3 +45,9 @@ export const actions = {
         }
 	}
 };
+
+export function load({ cookies, url }) {
+    if (cookies.get("login")) {
+        redirect(303, url.searchParams.get("redirect") ?? "/")
+    }
+}
