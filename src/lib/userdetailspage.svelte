@@ -10,7 +10,8 @@
 	import { setBackground } from '/src/lib/background.js';
 
 	onMount(() => {
-		const undo = setBackground('url(images/eviljambobaby5.jpg)');
+		const backgroundImage = pageType == "login" ? "images/eviljambobaby5.jpg" : "images/mysteriousjamboman.jpg"
+		const undo = setBackground(`url(${backgroundImage})`);
 		return undo;
 	});
 </script>
