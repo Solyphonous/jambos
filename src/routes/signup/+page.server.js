@@ -23,9 +23,9 @@ async function signUp(username, password) {
                 success: true,
             }
         } else {
-            console.error(`Error from signup server: ${data.error}`)
             return {
-                success: false
+                success: false,
+                error: data.error
             }
         }    
 }
@@ -35,13 +35,14 @@ export const actions = {
 		const formData = await request.formData()
         const username = formData.get("username")
         const password = formData.get("password")
-        console.log(`Username: ${username}\nPassword: ${password}`)
 
         const signupSuccess = await signUp(username, password)
 
         if (signupSuccess.success) {
             console.log("Account successfully created.")
             redirect(303, "/login")
+        } else {
+            return { toast: signupSuccess.error }
         }
 	}
 };
