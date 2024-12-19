@@ -1,5 +1,7 @@
 import { verifyJWT } from './lib/verifyJWT'
 
+// THIS IS AWFUL AND BAD AND SHARES TOKENS WITH OTHER USERS! FIX LATER
+
 var cachedUnverifiedToken
 var cachedToken
 
