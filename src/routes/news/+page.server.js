@@ -1,7 +1,7 @@
 import { env } from "$env/dynamic/private";
 
 async function getNews() {
-    const response = await fetch("https://jambos-worker.jopogb.workers.dev/api/list", {
+    const response = await fetch(`${env.WorkerURL}/list`, {
         headers: {
             "Authorization": env.WorkersAPIKey
         }

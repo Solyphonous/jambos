@@ -11,5 +11,5 @@ export function load({ locals }) {
         redirect(302, "/")
     }
 
-    return { token: token}
+    return { token: token }
 }

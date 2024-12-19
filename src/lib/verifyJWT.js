@@ -1,7 +1,7 @@
 import { env } from "$env/dynamic/private";
 
 export async function verifyJWT(token) {
-    const response = await fetch(`https://jambos-worker.jopogb.workers.dev/verifytoken`, {
+    const response = await fetch(`${env.WorkerURL}/verifytoken`, {
                 method: "POST",
                 headers: {
                     "Authorization": env.WorkersAPIKey,

@@ -4,7 +4,7 @@ import { env } from "$env/dynamic/private";
 import { redirect } from "@sveltejs/kit";
 
 async function getJWT(username, password) {
-    const response = await fetch(`https://jambos-worker.jopogb.workers.dev/login`, {
+    const response = await fetch(`${env.WorkerURL}/login`, {
             method: "POST",
             headers: {
                 "Authorization": env.WorkersAPIKey,

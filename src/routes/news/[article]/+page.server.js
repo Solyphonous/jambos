@@ -10,7 +10,7 @@ export async function load ({ params }) {
     var content = `<h1>No article content</h1>`
     var author = `Nobody`
 
-    const response = await fetch(`https://jambos-worker.jopogb.workers.dev/api/article/${encodedTitle}`, {
+    const response = await fetch(`${env.WorkerURL}/article/${encodedTitle}`, {
         headers: {
             "Authorization": env.WorkersAPIKey
         }
