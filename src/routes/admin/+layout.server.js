@@ -8,7 +8,6 @@ export function load({ locals }) {
     }
 
     if (token.rank < 250) {
-        console.warn("Rank too low")
         redirect(302, "/")
     }
 

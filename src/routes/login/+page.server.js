@@ -20,7 +20,6 @@ async function getJWT(username, password) {
         const data = await response.json()
         if (response.ok) {
             const token = data.token
-            console.log(`Success logging in! Token: ${token}`)
             return {
                 success: true,
                 token: token

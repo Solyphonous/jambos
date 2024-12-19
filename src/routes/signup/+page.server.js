@@ -39,7 +39,6 @@ export const actions = {
         const signupSuccess = await signUp(username, password)
 
         if (signupSuccess.success) {
-            console.log("Account successfully created.")
             redirect(303, "/login")
         } else {
             return { toast: signupSuccess.error }
