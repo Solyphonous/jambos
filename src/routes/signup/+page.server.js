@@ -4,7 +4,7 @@ import { env } from "$env/dynamic/private";
 import { redirect } from "@sveltejs/kit";
 
 async function signUp(username, password) {
-    const response = await fetch(`https://jambos-worker.jopogb.workers.dev/signup`, {
+    const response = await fetch(`${env.WorkerURL}/signup`, {
             method: "POST",
             headers: {
                 "Authorization": env.WorkersAPIKey,
