@@ -1,0 +1,1 @@
+<a href="https://www.youtube.com/@CabbageChad25"><img src="images/died.jpg" alt="died man"></a>

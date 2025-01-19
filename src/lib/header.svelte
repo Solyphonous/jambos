@@ -19,6 +19,7 @@
         {name: "News", path: "/news"},
         {name: "The Jamborium", path: "/jamborium"},
         {name: "EVIL PAGE", path: "/linganguli"},
+        {name: "memorial", path: "/memorial"},
         ...(token?.rank > 250 ? [{name: "Admin", path: "/admin"}] : []),
         ...(token ? [{name: "Logout", path: "/logout"}] : [{name: "Login", path: "/login"}])
     ]
