@@ -1,5 +1,9 @@
 <script>
     export let data
+    export let form
+
+    import Warning from "/src/lib/warning.svelte"
+
     $: title = "Article Title"
     $: content = `<p>Enter your article here...</p>`
 </script>
@@ -12,11 +16,11 @@
     <br>
     <label for="image">
         Thumbnail resource
-        <input type="text" name="image" placeholder="/images/nathan.webp" required>
+        <input type="text" name="thumbnail" placeholder="/images/nathan.webp" required>
     </label>
     <br>
 
-    <textarea bind:value={content} name="" id="" rows=20 cols=100></textarea>
+    <textarea bind:value={content} name="content" id="content" rows=20 cols=100></textarea>
     <br>
     <button>Submit</button>
 </form>
@@ -26,3 +30,5 @@
     <h2>by {data.token.username}</h2>
     {@html content}
 </div>
+
+<Warning toast={form?.toast}/>
