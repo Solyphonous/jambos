@@ -3,7 +3,7 @@
 </script>
 
 <div class="article">
-    <a href="news/{article.title}">
+    <a href="news/{article.name}">
         <div class="image-container">
             <img src="{article.thumbnail ? article.thumbnail : "/images/nathan.webp"}" alt="">
         </div>
