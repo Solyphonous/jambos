@@ -21,7 +21,8 @@ export async function fetchArticle(articlename) {
         title: data.title,
         author: data.author,
         content: data.content,
-        thumbnail: data.thumbnail
+        thumbnail: data.thumbnail,
+        name: data.name
     }
 }
 
