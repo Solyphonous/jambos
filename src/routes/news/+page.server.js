@@ -7,7 +7,7 @@ async function getNews() {
             "Authorization": env.WorkersAPIKey
         }
     })
-    const data = response.json()
+    const data = await response.json()
     if (response.ok) {
         return data
     } else {
