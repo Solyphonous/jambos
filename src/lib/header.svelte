@@ -63,17 +63,20 @@
     }
     
     img {
-        height: 200%;
+        height: 140px;
         max-width: 100%;
+        width: auto;
         transform: rotate(-15deg);
     }
 
     ul {
         list-style: none;
         display: flex;
+        flex-wrap: wrap;
         margin: 0;
         padding: 0;
         margin-left: auto;
+
     }
 
     li {
