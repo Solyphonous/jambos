@@ -1,8 +1,7 @@
 import { env } from "$env/dynamic/private";
 
 export async function fetchArticle(articlename) {
-    const title = articlename
-    const encodedTitle = title.replace(/ /g, "-")
+    const encodedTitle = articlename.replace(/ /g, "-")
 
     var content = `<h1>No article content</h1>`
     var author = `Nobody`
@@ -19,7 +18,7 @@ export async function fetchArticle(articlename) {
     }
 
     return { 
-        title: title,
+        title: data.title,
         author: data.author,
         content: data.content,
         thumbnail: data.thumbnail
