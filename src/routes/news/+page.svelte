@@ -1,8 +1,6 @@
 <script>
     export let data
     import Article from '../../lib/news/article.svelte';
-
-    console.log(data.articles)
 </script>
 
 <div class="article-grid">
