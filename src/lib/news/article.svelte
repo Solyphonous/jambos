@@ -1,34 +1,34 @@
 <script>
-    export let article
+	export let article;
 </script>
 
-<div class="article">
-    <a href="news/{article.name}">
-        <div class="image-container">
-            <img src="{article.thumbnail ? article.thumbnail : "/images/nathan.webp"}" alt="">
-        </div>
-        <p>{article.title}</p>
-        <p>by <b>{article.author}</b></p>
-    </a>
-</div>
+<a href="news/{article.name}">
+	<div class="article">
+		<div class="image-container">
+			<img src={article.thumbnail ? article.thumbnail : '/images/nathan.webp'} alt="" />
+		</div>
+		<p>{article.title}</p>
+		<p>by <b>{article.author}</b></p>
+	</div>
+</a>
 
 <style>
-    .article {
-        border-style: dashed;
-        border-width: .2rem;
-        border-color: white;
-        margin: 1rem;
-    }
-    .image-container {
-        height: 10rem;
-        width: 20rem;
-        overflow: hidden;
-        padding: .5rem;
-    }
+	.article {
+		border-style: dashed;
+		border-width: 0.2rem;
+		border-color: white;
+		margin: 1rem;
+	}
+	.image-container {
+		height: 10rem;
+		width: 20rem;
+		overflow: hidden;
+		padding: 0.5rem;
+	}
 
-    img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-    }
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+	}
 </style>
