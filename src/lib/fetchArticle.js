@@ -25,5 +25,3 @@ export async function fetchArticle(articlename) {
         name: data.name
     }
 }
-
-    
