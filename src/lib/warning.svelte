@@ -1,15 +1,20 @@
 <script>
     export let toast
+
+    var showToast = true
+    setTimeout(() => {
+        showToast = false
+    }, 5000);
 </script>
 
-{#if (toast)}
+{#if (toast && showToast)}
 
-<h1>{toast}</h1>
+    <h2 id="toast">{toast}</h2>
 
 {/if}
 
 <style>
-    h1 {
+    h2 {
         position: fixed;
         bottom: 10px;
         left: 50%;
