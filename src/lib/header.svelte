@@ -55,11 +55,12 @@
         top: 0
     }
     nav {
-        height: 70px;
+        height: 4rem;
         top: 0;
         display: flex;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 2rem;
+        gap: 1rem;
         margin-bottom: 100px;
 
         background-color: rgb(10, 10, 10);
