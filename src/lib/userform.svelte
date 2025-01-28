@@ -33,13 +33,6 @@
         color: white;
     }
 
-    button {
-        background-color: black;
-        border-color: white;
-        color: white;
-        font-family: monospace;
-    }
-
     form {
         margin: auto;
         max-width: 80%;

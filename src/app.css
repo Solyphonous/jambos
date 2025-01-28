@@ -30,3 +30,10 @@ body, html {
     padding: 0;
     color: white;
 }
+
+button {
+    background-color: black;
+    border-color: white;
+    color: white;
+    font-family: monospace;
+}
