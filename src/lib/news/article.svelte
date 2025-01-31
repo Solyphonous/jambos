@@ -1,5 +1,9 @@
 <script>
 	export let article;
+
+	var date = new Date(Number(article.name))
+	var datestring = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
+	
 </script>
 
 <a href="news/{article.name}">
@@ -9,6 +13,7 @@
 		</div>
 		<p>{article.title}</p>
 		<p>by <b>{article.author}</b></p>
+		<h5>{datestring}</h5>
 	</div>
 </a>
 
