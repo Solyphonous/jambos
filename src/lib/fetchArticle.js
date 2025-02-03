@@ -11,11 +11,5 @@ export async function fetchArticle(articlename) {
 
 	const data = await response.json();
 
-	return {
-		title: data.title,
-		author: data.author,
-		content: data.content,
-		thumbnail: data.thumbnail,
-		name: data.name
-	};
+	return data;
 }
