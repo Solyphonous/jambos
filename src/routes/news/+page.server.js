@@ -23,7 +23,6 @@ export async function load() {
 		articles.push(await fetchArticle(news[i].name));
 	}
 
-	console.log(articles);
 	return {
 		articles: articles
 	};
