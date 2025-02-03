@@ -1,11 +1,10 @@
-import { WorkerURL, WorkersAPIKey } from '$env/dynamic/private';
+import { env } from '$env/dynamic/private';
 import { fetchArticle } from '../../lib/fetchArticle';
 
 async function getNews() {
-	console.log(WorkerURL);
-	const response = await fetch(`${WorkerURL}/list`, {
+	const response = await fetch(`${env.WorkerURL}/list`, {
 		headers: {
-			Authorization: WorkersAPIKey
+			Authorization: env.WorkersAPIKey
 		}
 	});
 	const data = await response.json();
