@@ -7,7 +7,7 @@
 
 <head>
 	<title>The Jambos Casa - {data.title}</title>
-	<meta content={data.title} property="og:title" />
+	<meta content="Jambonian News: {data.title}" property="og:title" />
 	<meta content={data.thumbnail} property="og:image" />
 </head>
 
