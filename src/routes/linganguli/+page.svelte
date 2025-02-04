@@ -9,7 +9,7 @@
     
     <h2> be here and don't turn back (or do since it's evil site)</h2>
     
-    <img src="/images/notgolonka.jpg" alt="fuck off you todger">
+    <img src="/images/notgolonka.jpg" alt="picture of golonka">
     
     <img src="/images/andy.jpg" alt="balabinga">
 
