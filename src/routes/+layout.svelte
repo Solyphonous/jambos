@@ -30,9 +30,8 @@
 <head>
 	{#if !isArticle}
 		<title>The Jambos Casa - {pagetitle}</title>
+		<meta content="/images/jambojudah.png" property="og:image" />
 	{/if}
-
-	<meta content="/images/jambojudah.png" property="og:image" />
 </head>
 
 <Redirector />
