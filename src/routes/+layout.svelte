@@ -27,12 +27,12 @@
 	$: isArticle = /News\/.+/.test(pagetitle);
 </script>
 
-<head>
+<svelte:head>
 	{#if !isArticle}
 		<title>The Jambos Casa - {pagetitle}</title>
 		<meta content="/images/jambojudah.png" property="og:image" />
 	{/if}
-</head>
+</svelte:head>
 
 <Redirector />
 <Header token={data.token} />
