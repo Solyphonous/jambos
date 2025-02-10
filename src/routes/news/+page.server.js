@@ -18,12 +18,7 @@ async function getNews() {
 export async function load() {
 	let news = await getNews();
 
-	var articles = [];
-	for (var i = 0; i < news.length; i++) {
-		articles.push(await fetchArticle(news[i].name));
-	}
-
 	return {
-		articles: articles
+		articles: news
 	};
 }

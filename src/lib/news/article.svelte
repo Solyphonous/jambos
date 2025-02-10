@@ -1,17 +1,19 @@
 <script>
 	export let article;
 
-	var date = new Date(Number(article.name));
+	const articleValue = JSON.parse(article.value);
+
+	var date = new Date(Number(article.key));
 	var datestring = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 </script>
 
-<a href="news/{article.name}">
-	<div class="article" style={article.styling}>
+<a href="news/{article.value}">
+	<div class="article" style={articleValue.styling}>
 		<div class="image-container">
-			<img src={article.thumbnail ? article.thumbnail : '/images/nathan.webp'} alt="" />
+			<img src={articleValue.thumbnail ? articleValue.thumbnail : '/images/nathan.webp'} alt="" />
 		</div>
-		<p>{article.title}</p>
-		<p>by <b>{article.author}</b></p>
+		<p>{articleValue.title}</p>
+		<p>by <b>{articleValue.author}</b></p>
 		<h5>{datestring}</h5>
 	</div>
 </a>
