@@ -20,7 +20,6 @@
 		scripts.forEach((script) => {
 			const newScript = document.createElement('script');
 			newScript.textContent = script.textContent;
-			console.log(newScript.textContent);
 			document.body.appendChild(newScript).remove();
 		});
 	});
