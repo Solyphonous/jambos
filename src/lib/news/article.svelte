@@ -7,7 +7,7 @@
 	var datestring = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 </script>
 
-<a href="news/{article.value}">
+<a href="news/{article.key}">
 	<div class="article" style={articleValue.styling}>
 		<div class="image-container">
 			<img src={articleValue.thumbnail ? articleValue.thumbnail : '/images/nathan.webp'} alt="" />
