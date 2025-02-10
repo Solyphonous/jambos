@@ -1,3 +1,7 @@
+:root {
+	--font-size: 1.2rem;
+}
+
 h1,
 h2,
 h3,
@@ -17,7 +21,7 @@ h1 {
 }
 
 p {
-	font-size: 1.2rem;
+	font-size: var(--font-size);
 }
 
 a {
@@ -38,11 +42,14 @@ body {
 	color: white;
 }
 
-button {
+button, input[type="submit"] {
 	background-color: black;
 	border-color: white;
 	color: white;
 	font-family: monospace;
+	font-size: var(--font-size);
+	border-style: solid;
+	cursor: pointer;
 }
 
 .article-grid {
@@ -50,4 +57,20 @@ button {
 	justify-content: center;
 	width: auto;
 	flex-wrap: wrap;
+}
+
+textarea {
+	width: 100%;
+	display: block;
+	resize: none;
+	overflow-y: auto;
+	box-sizing: border-box;
+	background-color: black;
+	color: white;
+	border: none;
+	font-size: var(--font-size);
+}
+
+label {
+	font-size: 1.4rem
 }
