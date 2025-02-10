@@ -13,7 +13,7 @@
 
 	$: dummyArticle = {
 		title: title,
-		name: Date.now(),
+		key: Date.now(),
 		author: author,
 		thumbnail: thumbnail,
 		styling: styling
@@ -68,3 +68,10 @@
 </div>
 
 <Warning toast={form?.toast} />
+
+<style>
+	textarea {
+		resize: both;
+		width: auto;
+	}
+</style>
