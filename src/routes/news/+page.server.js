@@ -18,7 +18,11 @@ async function getNews() {
 export async function load() {
 	let news = await getNews();
 
+	const formattedNews = news.map((item) => ({
+		key: item.key,
+		...JSON.parse(item.value)
+	}));
 	return {
-		articles: news
+		articles: formattedNews
 	};
 }
