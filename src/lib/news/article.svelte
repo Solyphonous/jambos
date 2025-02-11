@@ -22,10 +22,10 @@
 		border-width: 0.2rem;
 		border-color: white;
 		margin: 1rem;
+		width: 20rem;
 	}
 	.image-container {
 		height: 10rem;
-		width: 20rem;
 		overflow: hidden;
 		padding: 0.5rem;
 	}
