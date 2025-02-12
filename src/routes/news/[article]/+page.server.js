@@ -2,6 +2,7 @@
 
 import { fetchArticle } from '../../../lib/fetchArticle.js';
 import { env } from '$env/dynamic/private';
+import { redirect } from '@sveltejs/kit';
 
 async function fetchComments(articleId) {
 	const response = await fetch(`${env.WorkerURL}/get_comments`, {
@@ -24,6 +25,10 @@ async function fetchComments(articleId) {
 export async function load({ params }) {
 	var article = await fetchArticle(params.article);
 	var comments = await fetchComments(params.article);
+
+	if (article.error) {
+		redirect(302, '/news');
+	}
 
 	return {
 		article: article,
