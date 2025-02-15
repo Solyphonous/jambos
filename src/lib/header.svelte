@@ -63,11 +63,15 @@
 		height: 200%;
 		transform: rotate(-15deg);
 		object-fit: contain;
-		transition: transform 0.3s ease;
+		transition: transform 0.3s;
 	}
 
 	.logo:hover {
 		transform: rotate(340deg) scale(1.2);
+	}
+
+	.logo:active {
+		transform: scale(0.9);
 	}
 
 	nav {

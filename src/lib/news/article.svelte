@@ -23,7 +23,7 @@
 		border-color: white;
 		margin: 1rem;
 		width: 20rem;
-		transition: transform 0.05s;
+		transition: transform 0.1s;
 	}
 
 	.article:hover {

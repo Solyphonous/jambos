@@ -46,6 +46,11 @@ input[type='submit']:hover {
 	color: black;
 }
 
+button:active,
+input[type='submit']:active {
+	transform: scale(0.9);
+}
+
 body {
 	background-position: right;
 	background-size: 100vh;
