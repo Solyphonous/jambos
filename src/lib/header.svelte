@@ -118,6 +118,7 @@
 	}
 
 	span {
+		font-style: italic;
 		font-weight: bold;
 	}
 </style>

@@ -30,6 +30,10 @@
 		transform: scale(1.1);
 	}
 
+	.article:active {
+		transform: scale(0.9);
+	}
+
 	.image-container {
 		height: 10rem;
 		overflow: hidden;
