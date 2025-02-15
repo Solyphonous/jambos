@@ -9,8 +9,8 @@ h4,
 h5,
 h6,
 p,
-img, 
-ol, 
+img,
+ol,
 ul {
 	max-width: 80%;
 	margin-left: auto;
@@ -18,7 +18,8 @@ ul {
 	display: block;
 }
 
-ol, ul {
+ol,
+ul {
 	list-style-position: inside;
 }
 
@@ -26,13 +27,23 @@ h1 {
 	font-size: 3rem;
 }
 
-p, ol, ul, li {
+p,
+ol,
+ul,
+li {
 	font-size: var(--font-size);
 }
 
 a {
 	color: white;
 	text-decoration: none;
+}
+
+a:hover,
+button:hover,
+input[type='submit']:hover {
+	background-color: white;
+	color: black;
 }
 
 body {

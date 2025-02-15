@@ -23,7 +23,13 @@
 		border-color: white;
 		margin: 1rem;
 		width: 20rem;
+		transition: transform 0.05s;
 	}
+
+	.article:hover {
+		transform: scale(1.1);
+	}
+
 	.image-container {
 		height: 10rem;
 		overflow: hidden;
@@ -34,5 +40,10 @@
 		max-width: 100%;
 		max-height: 100%;
 		object-fit: contain;
+	}
+
+	a:hover {
+		background-color: black;
+		color: white;
 	}
 </style>
