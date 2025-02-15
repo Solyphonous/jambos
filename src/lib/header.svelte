@@ -13,7 +13,6 @@
 	}
 
 	$: links = [
-		{ name: 'Home', path: '/' },
 		{ name: 'About', path: '/about' },
 		{ name: 'Music', path: '/musica' },
 		{ name: 'News', path: '/news' },
@@ -68,7 +67,7 @@
 	}
 
 	.logo:hover {
-		transform: rotate(-20deg) scale(1.2);
+		transform: rotate(340deg) scale(1.2);
 	}
 
 	nav {
@@ -82,7 +81,7 @@
 		background-color: rgb(10, 10, 10);
 	}
 
-	@media screen and (max-width: 1000px) {
+	@media screen and (max-width: 900px) {
 		ul {
 			flex-direction: column;
 		}
@@ -103,7 +102,7 @@
 
 	ul {
 		display: flex;
-		gap: 1rem;
+		gap: 1.5rem;
 		margin: 0;
 		padding: 0;
 		list-style: none;
