@@ -1,99 +1,120 @@
 <script>
-    import { browser } from "$app/environment"
-    import { afterNavigate } from "$app/navigation"
+	import { browser } from '$app/environment';
+	import { afterNavigate } from '$app/navigation';
 
-    export let token
+	export let token;
 
-    let currentpath = browser ? window.location.pathname : "/"
+	let currentpath = browser ? window.location.pathname : '/';
 
-    if (browser) {
-        afterNavigate(() => {
-            currentpath = window.location.pathname;
-        });
-    }
+	if (browser) {
+		afterNavigate(() => {
+			currentpath = window.location.pathname;
+		});
+	}
 
-    $: links = [
-        {name: "Home", path: "/"},
-        {name: "About", path: "/about"},
-        {name: "Music", path: "/musica"},
-        {name: "News", path: "/news"},
-        //{name: "The Jamborium", path: "/jamborium"}, Removed until it's added
-        {name: "MEMORIAL", path: "/memorial"},
-        ...(token?.rank > 250 ? [{name: "Admin", path: "/admin"}] : []),
-        ...(token ? [{name: "Logout", path: "/logout"}] : [{name: "Login", path: "/login"}])
-    ]
-
+	$: links = [
+		{ name: 'Home', path: '/' },
+		{ name: 'About', path: '/about' },
+		{ name: 'Music', path: '/musica' },
+		{ name: 'News', path: '/news' },
+		//{name: "The Jamborium", path: "/jamborium"}, Removed until it's added
+		{ name: 'MEMORIAL', path: '/memorial' },
+		...(token?.rank > 250 ? [{ name: 'Admin', path: '/admin' }] : []),
+		...(token ? [{ name: 'Logout', path: '/logout' }] : [{ name: 'Login', path: '/login' }])
+	];
 </script>
 
 <div class="header">
-    <nav>
-        <a href="/" class="logo-link"><img src="/images/jambologo.png" alt="The jambos logo"></a>
-        <ul>
-            {#each links as link}
-                <li style={link.name == "MEMORIAL" ? "font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" : ""}>
-                    {#if link.path === currentpath}
-                        <span>{link.name}</span>
-                    {:else}
-                        <a href={link.path}>{link.name}</a>
-                    {/if}
-                </li>
-            {/each}
-        </ul>
-    </nav>
+	<nav>
+		<div class="logo-container">
+			<a href="/">
+				<img class="logo wide" src="/images/jambologo.png" alt="The jambos logo" />
+			</a>
+		</div>
+		<ul>
+			{#each links as link}
+				<li
+					style={link.name == 'MEMORIAL'
+						? "font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"
+						: ''}
+				>
+					{#if link.path === currentpath}
+						<span>{link.name}</span>
+					{:else}
+						<a href={link.path}>{link.name}</a>
+					{/if}
+				</li>
+			{/each}
+		</ul>
+	</nav>
 </div>
 
-
 <style>
+	.header {
+		position: sticky;
+		top: 0;
+	}
 
-    .logo-link {
-        display: flex;
-        align-items: center;
-        height: 100%;
-    }
-    .header {
-        position: sticky;
-        top: 0
-    }
-    nav {
-        height: 4rem;
-        top: 0;
-        display: flex;
-        align-items: center;
-        padding: 0 2rem;
-        gap: 1rem;
-        margin-bottom: 100px;
+	.logo-container {
+		height: 6em;
+		padding-top: 2em;
+	}
 
-        background-color: rgb(10, 10, 10);
-    }
-    
-    img {
-        padding-top: 80px;
-        flex-shrink: 0;
-        height: auto;
-        max-width: 140px;
-        width: 140px;
-        transform: rotate(-15deg);
-    }
+	.logo {
+		height: 200%;
+		transform: rotate(-15deg);
+		object-fit: contain;
+		transition: transform 0.3s ease;
+	}
 
-    ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0;
-        padding: 0;
-        margin-left: auto;
+	.logo:hover {
+		transform: rotate(-20deg) scale(1.2);
+	}
 
-    }
+	nav {
+		height: 3em;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 0.5rem 2rem;
+		margin-bottom: 8em;
+		background-color: rgb(10, 10, 10);
+	}
 
-    li {
-        margin: 0 15px
-    }
+	@media screen and (max-width: 1000px) {
+		ul {
+			flex-direction: column;
+		}
 
-    a, span {
-        font-size: 2rem;
-        height: 100%;
-    }
-    span {
-        font-weight: bold;
-    }
+		nav {
+			flex-direction: column;
+			height: auto;
+		}
+
+		.header {
+			position: static;
+		}
+
+		.logo {
+			height: 100%;
+		}
+	}
+
+	ul {
+		display: flex;
+		gap: 1rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	a,
+	span {
+		font-size: 1.5em;
+	}
+
+	span {
+		font-weight: bold;
+	}
 </style>
