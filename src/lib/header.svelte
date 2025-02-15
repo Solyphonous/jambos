@@ -27,7 +27,11 @@
 
 <div class="header">
     <nav>
-        <a href="/" class="logo-link"><img src="/images/jambologo.png" alt="The jambos logo"></a>
+        <div class="logo-container">
+            <a href="/">
+                <img class="logo wide" src="/images/jambologo.png" alt="The jambos logo">
+            </a>
+        </div>
         <ul>
             {#each links as link}
                 <li style={link.name == "MEMORIAL" ? "font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" : ""}>
@@ -44,54 +48,65 @@
 
 
 <style>
-
-    .logo-link {
-        display: flex;
-        align-items: center;
-        height: 100%;
-    }
     .header {
         position: sticky;
-        top: 0
-    }
-    nav {
-        height: 4rem;
         top: 0;
-        display: flex;
-        align-items: center;
-        padding: 0 2rem;
-        gap: 1rem;
-        margin-bottom: 100px;
+    }
 
-        background-color: rgb(10, 10, 10);
+    .logo-container {
+        height: 6em;
+        padding-top: 2em;
+    }
+
+    .logo {
+        height: 200%;
+        transform: rotate(-15deg);
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+        transform: rotate(-20deg) scale(1.2);
     }
     
-    img {
-        padding-top: 80px;
-        flex-shrink: 0;
-        height: auto;
-        max-width: 140px;
-        width: 140px;
-        transform: rotate(-15deg);
+    nav {
+        height: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.5rem 2rem;
+        margin-bottom: 8em;
+        background-color: rgb(10, 10, 10);
+    }
+
+    @media screen and (max-width: 500px) {
+        ul {
+            display: block;
+            flex-direction: column;
+            height:auto;
+            align-items: flex-start;
+        }
+
+        nav {
+            flex-direction: column;
+        }
+
+        .header {
+            position: static;
+            top: auto;
+        }
     }
 
     ul {
-        list-style: none;
         display: flex;
-        flex-wrap: wrap;
+        gap: 1rem;
         margin: 0;
         padding: 0;
-        margin-left: auto;
-
+        list-style: none;
     }
-
-    li {
-        margin: 0 15px
-    }
-
     a, span {
-        font-size: 2rem;
-        height: 100%;
+        font-size: 1.5em;
     }
     span {
         font-weight: bold;
