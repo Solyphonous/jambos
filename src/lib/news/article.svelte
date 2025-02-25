@@ -24,6 +24,7 @@
 		margin: 1rem;
 		width: 20rem;
 		transition: transform 0.1s;
+		background-color: black;
 	}
 
 	.article:hover {
