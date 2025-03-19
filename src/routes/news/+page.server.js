@@ -1,5 +1,4 @@
 import { env } from '$env/dynamic/private';
-import { fetchArticle } from '../../lib/fetchArticle';
 
 async function getNews() {
 	const response = await fetch(`${env.WorkerURL}/list`, {

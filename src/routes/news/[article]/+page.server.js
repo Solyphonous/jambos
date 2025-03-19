@@ -37,7 +37,7 @@ export async function load({ params }) {
 }
 
 export const actions = {
-	default: async ({ request, cookies, url, locals, event, params }) => {
+	default: async ({ request, cookies, params }) => {
 		const formData = await request.formData();
 		const cookie = cookies.get('token');
 
