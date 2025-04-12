@@ -38,5 +38,6 @@
 <Header token={data.token} />
 
 <main>
+	<audio autoplay="true" volume="0.1" src="audio/jam.mp3"></audio>
 	<slot />
 </main>
